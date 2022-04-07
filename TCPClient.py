@@ -2,7 +2,7 @@ from socket import *
 serverName = '192.168.100.4'
 serverPort = 12000
 clientSocket = socket(AF_INET, SOCK_STREAM)
-clientSocket.connect((serverName, serverPort))
+clientSocket.connect(('192.168.100.4', 12000))
 messagetoserver = raw_input('Enter Message for Server: ')
 clientSocket.send(messagetoserver)
 replyfromserver = clientSocket.recv(1024)
